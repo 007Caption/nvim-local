@@ -37,10 +37,10 @@ function M.setup_servers()
           unusedwrite = true,
           useany = true,
         },
-        staticcheck = true,
+        staticcheck = false,
 
         -- 常用功能
-        usePlaceholders = true,
+        usePlaceholders = false,
         completeUnimported = true,
 
         -- 如果你是单 repo 多模块，可按需开

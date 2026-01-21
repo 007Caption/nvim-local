@@ -12,4 +12,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "复制后短暂高亮",
 })
 
+vim.api.nvim_create_autocmd("VimEnter", {
+  once = true,
+  callback = function()
+    vim.schedule(function()
+      -- 打开左侧 neo-tree（filesystem）
+      vim.cmd("Neotree filesystem reveal left")
+    end)
+  end,
+})
 

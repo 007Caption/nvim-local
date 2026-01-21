@@ -21,7 +21,9 @@ require("lazy").setup({
   require("plugins.icons"),
 
   -- 目录树
-  require("plugins.nvimtree"),
+  -- require("plugins.nvimtree"),
+  require("plugins.neotree"),
+
 
   -- ========== UI：状态栏 ==========
   require("plugins.lualine"),
@@ -90,14 +92,6 @@ require("lazy").setup({
     config = function()
       require("plugins.cmp").setup()
     end,
-  },
-  -- ========== 文件树 ==========
- {
-   "nvim-tree/nvim-tree.lua",
-   dependencies = { "nvim-tree/nvim-web-devicons" },
-   config = function()
-     require("plugins.tree").setup()
-   end,
   },
 
   -- ========== 模糊查找 / 搜索 ==========

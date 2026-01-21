@@ -93,6 +93,7 @@ end, vim.tbl_extend("force", opts, {
   desc = "缓冲区：列出已打开文件"
 }))
 
+vim.keymap.set("n", "<leader>cd", "<cmd>Neotree filesystem reveal left<cr>", { desc = "NeoTree Reveal File" })
 
 
 
