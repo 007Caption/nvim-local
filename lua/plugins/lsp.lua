@@ -31,7 +31,8 @@ function M.setup_servers()
       gopls = {
         -- 更强的静态分析
         analyses = {
-          unusedparams = true,
+          unusedparams = false,
+          fieldalignment = false,
           nilness = true,
           unusedwrite = true,
           useany = true,

@@ -40,6 +40,8 @@ require("lazy").setup({
 
   require("plugins.highlight"),
   require("plugins.go_highlight"),
+  require("plugins.treesitter"),
+
 
 
 
@@ -89,20 +91,9 @@ require("lazy").setup({
       require("plugins.cmp").setup()
     end,
   },
-
-  -- ========== 语法树（高亮/结构/缩进） ==========
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-    lazy = false,
-    config = function()
-     require("plugins.treesitter").setup()
-    end,
-  },
-
   -- ========== 文件树 ==========
  {
-    "nvim-tree/nvim-tree.lua",
+   "nvim-tree/nvim-tree.lua",
    dependencies = { "nvim-tree/nvim-web-devicons" },
    config = function()
      require("plugins.tree").setup()
