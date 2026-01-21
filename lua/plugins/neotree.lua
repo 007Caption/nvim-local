@@ -12,6 +12,7 @@ return {
     require("neo-tree").setup({
       close_if_last_window = false,
       popup_border_style = "rounded",
+      use_default_mappings = true,
 
       -- 左侧文件树
       window = {

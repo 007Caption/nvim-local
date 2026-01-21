@@ -60,14 +60,6 @@ map({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force",
   desc = "代码：执行 Code Action"
 }))
 
--- ========== 文件树 ==========
-map("n", "<leader>n", "<cmd>NvimTreeToggle<CR>", vim.tbl_extend("force", opts, {
-  desc = "文件树：打开/关闭"
-}))
-map("n", "<leader>f", "<cmd>NvimTreeFindFile<CR>", vim.tbl_extend("force", opts, {
-  desc = "文件树：定位当前文件"
-}))
-
 -- ========== Telescope：搜索 ==========
 map("n", "<leader>ff", function()
   require("telescope.builtin").find_files()
@@ -93,39 +85,21 @@ end, vim.tbl_extend("force", opts, {
   desc = "缓冲区：列出已打开文件"
 }))
 
-vim.keymap.set("n", "<leader>cd", "<cmd>Neotree filesystem reveal left<cr>", { desc = "NeoTree Reveal File" })
+vim.keymap.set("n", "<leader>cd", "<cmd>Neotree filesystem reveal left<cr>", { desc = "当前文件位置" })
 
 
+-- 打开 / 显示 Neo-tree
+vim.keymap.set("n", "<leader>n", function()
+  require("neo-tree.command").execute({
+    action = "show",
+    position = "left",
+  })
+end, { desc = "NeoTree: 打开文件树" })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- 关闭 Neo-tree（无条件）
+vim.keymap.set("n", "<leader>N", function()
+  require("neo-tree.command").execute({
+    action = "close",
+  })
+end, { desc = "NeoTree: 关闭文件树" })
 

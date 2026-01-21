@@ -52,6 +52,7 @@ return {
       { "<leader>d", group = "+诊断" },     -- diagnostics
       { "<leader>t", group = "+文件树" },   -- nvim-tree（如果你后面愿意改成 ,t*）
       { "<leader>t", group = "+测试" },
+      { "<leader>c", group = "+当前文件的位置" },
     })
   end,
 }
