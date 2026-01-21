@@ -38,15 +38,28 @@ require("lazy").setup({
   -- 快速注释
   require("plugins.comment"),
 
+  require("plugins.highlight"),
+  require("plugins.go_highlight"),
+
+
 
   -- ========== 主题 ==========
+  -- {
+  --  "tanvirtin/monokai.nvim",
+  --  priority = 1000, -- 主题一定要最先加载
+  --  config = function()
+  --    require("plugins.theme").setup_monokai()
+  --  end,
+  -- },
   {
-   "tanvirtin/monokai.nvim",
-   priority = 1000, -- 主题一定要最先加载
-   config = function()
-     require("plugins.theme").setup_monokai()
-   end,
+    "folke/tokyonight.nvim",
+    priority = 1000, 
+    lazy = false,
+    config = function()
+      require("plugins.theme").setup_tokyonight()
+    end,
   },
+
   -- ========== LSP 安装与管理 ==========
   {
     "williamboman/mason.nvim",

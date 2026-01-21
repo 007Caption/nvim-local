@@ -34,3 +34,8 @@ opt.timeoutlen = 400       -- leader 组合键等待时间（你用 , 作为 lea
 vim.opt.clipboard = "unnamedplus"
 
 
+
+
+-- TokyoNight 有时候终端的 termguicolors 没开会糊
+vim.opt.termguicolors = true
+
